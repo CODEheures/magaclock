@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        clock.onStart();
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
         clock.onPause();

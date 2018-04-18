@@ -34,7 +34,7 @@ public class Clock extends View {
         super(context, attrs);
     }
 
-    public void onResume() {
+    public void onStart() {
         isRunning = true;
         new Thread() {
             @Override
@@ -49,6 +49,10 @@ public class Clock extends View {
                 }
             }
         }.start();
+    }
+
+    public void onResume() {
+        isRunning = true;
     }
 
     public void onPause() {
